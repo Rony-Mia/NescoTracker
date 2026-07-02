@@ -44,7 +44,10 @@ object UpdateHelper {
                         val currentVersionName = context.packageManager
                             .getPackageInfo(context.packageName, 0).versionName
 
-                        if (tagName != currentVersionName) {
+                        // v2.1 এবং 2.1 যেন সমান হয় তার জন্য 'v' বাদ দিয়ে চেক করা
+                        val normalizedTagName = if (tagName.startsWith("v")) tagName.substring(1) else tagName
+
+                        if (normalizedTagName != currentVersionName) {
                             (context as? MainActivity)?.runOnUiThread {
                                 showUpdateDialog(context, tagName, downloadUrl)
                             }
