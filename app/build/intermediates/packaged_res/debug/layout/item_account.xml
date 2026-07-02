@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="7dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_gradient"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Top row: avatar + name/meter + share -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_circle_on_dark">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_bolt_on_dark" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextOnDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="বাসা" />
+
+                <TextView
+                    android:id="@+id/tvCustomerNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/colorTextOnDarkMuted"
+                    android:textSize="12sp"
+                    tools:text="মিটার নং: 35016708" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLowBalanceTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_tag_low_balance"
+                android:text="⚠️ কম"
+                android:textColor="@color/colorLow"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/bg_icon_circle_on_dark"
+                android:contentDescription="শেয়ার করুন"
+                android:padding="8dp"
+                android:src="@drawable/ic_share" />
+        </LinearLayout>
+
+        <!-- Balance -->
+        <TextView
+            android:id="@+id/tvBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorTextOnDark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="৳1,254.50" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বর্তমান ব্যালেন্স"
+            android:textColor="@color/colorTextOnDarkMuted"
+            android:textSize="12sp" />
+
+        <!-- Footer -->
+        <TextView
+            android:id="@+id/tvLastChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorTextOnDarkMuted"
+            android:textSize="11sp"
+            tools:text="সর্বশেষ চেক: ০২ জুলাই, ১১:৩০ AM" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

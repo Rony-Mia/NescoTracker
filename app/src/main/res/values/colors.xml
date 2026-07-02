@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ব্র্যান্ড কালার: গাঢ় চারকোল + উজ্জ্বল সবুজ (ফিনটেক স্টাইল) -->
+    <color name="colorPrimary">#12181B</color>
+    <color name="colorPrimaryDark">#0A0E10</color>
+    <color name="colorAccent">#1FCB6B</color>
+    <color name="colorAccentSoft">#E4F8EC</color>
+    <color name="colorBackground">#F3F6F4</color>
+    <color name="colorCard">#FFFFFF</color>
+    <color name="colorGood">#1FCB6B</color>
+    <color name="colorLow">#E5484D</color>
+    <color name="colorChipLow">#FDEAEA</color>
+    <color name="colorTextSecondary">#6B7876</color>
+    <color name="colorTextPrimary">#12181B</color>
+    <color name="colorTextOnDark">#FFFFFF</color>
+    <color name="colorTextOnDarkMuted">#A9B8B2</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- হিরো কার্ড গ্রেডিয়েন্ট -->
+    <color name="colorHeroStart">#1E2924</color>
+    <color name="colorHeroEnd">#0B0F0E</color>
+
+    <!-- সার্চ/ফিল্টার ও শেয়ার আইকনের জন্য -->
+    <color name="colorIconTint">#6B7876</color>
+    <color name="colorSurfaceVariant">#EAF3EE</color>
+    <color name="colorStroke">#E5EBE8</color>
+</resources>

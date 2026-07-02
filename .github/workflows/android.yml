@@ -1,0 +1,33 @@
+name: Android CI/CD
+
+on:
+  push:
+    tags:
+      - 'v*' # যখনই আপনি v1.1, v1.2 এরকম ট্যাগ দিয়ে পুশ করবেন তখন কাজ করবে
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+        
+      - name: Build with Gradle
+        run: ./gradlew assembleRelease
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: app/build/outputs/apk/release/app-release-unsigned.apk # অথবা signed apk থাকলে সেটির পথ
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

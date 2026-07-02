@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NESCO Tracker</string>
+    <string name="widget_description">অ্যাপ না খুলেই মিটারের সর্বশেষ ব্যালেন্স দেখুন</string>
+</resources>

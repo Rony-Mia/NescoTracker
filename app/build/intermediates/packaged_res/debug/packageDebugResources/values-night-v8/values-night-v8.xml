@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#2EE888</color>
+    <color name="colorAccentSoft">#173625</color>
+    <color name="colorBackground">#0B0F0E</color>
+    <color name="colorCard">#161C1A</color>
+    <color name="colorChipLow">#2E1618</color>
+    <color name="colorGood">#2EE888</color>
+    <color name="colorHeroEnd">#05100B</color>
+    <color name="colorHeroStart">#1E2A24</color>
+    <color name="colorIconTint">#8B9C97</color>
+    <color name="colorLow">#FF6B6B</color>
+    <color name="colorPrimary">#0B0F0E</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorStroke">#242D2A</color>
+    <color name="colorSurfaceVariant">#1F2724</color>
+    <color name="colorTextOnDark">#FFFFFF</color>
+    <color name="colorTextOnDarkMuted">#A9B8B2</color>
+    <color name="colorTextPrimary">#F3F6F4</color>
+    <color name="colorTextSecondary">#8B9C97</color>
+    <color name="white">#FFFFFF</color>
+    <style name="Theme.NescoTracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:statusBarColor">@color/colorHeroEnd</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorSurface">@color/colorCard</item>
+        <item name="colorOnSurface">@color/colorTextPrimary</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="materialButtonStyle">@style/Widget.NescoTracker.Button.Pill</item>
+    </style>
+</resources>

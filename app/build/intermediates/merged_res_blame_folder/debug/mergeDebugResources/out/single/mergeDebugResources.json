@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/layout_activity_main.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/layout_item_recharge.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/layout/item_recharge.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_header_gradient.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_header_gradient.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_icon_circle_on_dark.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_icon_circle_on_dark.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/layout_activity_add_account.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/layout/activity_add_account.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/xml_widget_balance_info.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/xml/widget_balance_info.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_delete.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_settings.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_search.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_recharge_icon.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_recharge_icon.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_history.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_history.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_tag_low_balance.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_tag_low_balance.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_pill_accent.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_pill_accent.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_input_field.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_input_field.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_share.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_share.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_dark_mode.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_dark_mode.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_bolt_on_dark.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_bolt_on_dark.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_plus.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_plus.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_tag_ok.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_tag_ok.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/layout_item_account.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/layout/item_account.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_widget.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_widget.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/layout_widget_balance.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/layout/widget_balance.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_back.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_bolt.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_bolt.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_bg_account_avatar.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/bg_account_avatar.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/menu_menu_main.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/menu/menu_main.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/drawable_ic_refresh.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/drawable/ic_refresh.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/layout_activity_recharge_history.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/layout/activity_recharge_history.xml"
+    },
+    {
+        "merged": "com.example.nescotracker.app-debug-43:/layout_activity_account_detail.xml.flat",
+        "source": "com.example.nescotracker.app-main-45:/layout/activity_account_detail.xml"
+    }
+]
