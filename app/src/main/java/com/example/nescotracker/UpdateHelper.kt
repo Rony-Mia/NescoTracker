@@ -6,7 +6,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import androidx.core.content.FileProvider
-import com.example.nescotracker.BuildConfig
 import okhttp3.*
 import org.json.JSONObject
 import java.io.File
@@ -15,41 +14,42 @@ import java.io.IOException
 
 object UpdateHelper {
 
-    // আপনার GitHub ইউজারনেম এবং রিপোজিটরি নাম
-    private const val GITHUB_USER = "Rony-Mia"
+    private const val GITHUB_USER = "Rony-Mia" 
     private const val REPO_NAME = "NescoTracker"
     private const val API_URL = "https://api.github.com/repos/$GITHUB_USER/$REPO_NAME/releases/latest"
 
     fun checkForUpdates(context: Context) {
         val client = OkHttpClient()
-        val request = Request.Builder().url(API_URL).build()
+        val request = Request.Builder()
+            .url(API_URL)
+            .header("Accept", "application/vnd.github.v3+json")
+            .build()
 
         client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                // নেটওয়ার্ক এরর হলে কিছু করার দরকার নেই
-            }
+            override fun onFailure(call: Call, e: IOException) {}
 
             override fun onResponse(call: Call, response: Response) {
                 response.body?.string()?.let { jsonString ->
                     try {
                         val json = JSONObject(jsonString)
-                        val serverVersionCode = json.optInt("id", 0) // GitHub Release ID কে আমরা ভার্সন হিসেবে ধরতে পারি, অথবা ট্যাগ নেম
                         val tagName = json.getString("tag_name")
-                        val downloadUrl = json.getJSONArray("assets")
-                            .getJSONObject(0).getString("browser_download_url")
+                        val assets = json.getJSONArray("assets")
+                        if (assets.length() > 0) {
+                            val downloadUrl = assets.getJSONObject(0).getString("browser_download_url")
+                            
+                            val packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                                context.packageManager.getPackageInfo(context.packageName, 0)
+                            } else {
+                                context.packageManager.getPackageInfo(context.packageName, 0)
+                            }
+                            val currentVersionName = packageInfo.versionName
 
-                        // অ্যাপের বর্তমান ভার্সন কোডের সাথে তুলনা (BuildConfig.VERSION_CODE)
-                        // আপনি যদি GitHub Tag ব্যবহার করেন (যেমন v2.1), তবে সেভাবে লজিক লিখতে হবে।
-                        // এখানে সহজ করার জন্য আমরা ধরি যদি ট্যাগের নাম বর্তমান ভার্সন নেমের সাথে না মিলে তবেই আপডেট।
-                        val currentVersionName = context.packageManager
-                            .getPackageInfo(context.packageName, 0).versionName
-
-                        // v2.1 এবং 2.1 যেন সমান হয় তার জন্য 'v' বাদ দিয়ে চেক করা
-                        val normalizedTagName = if (tagName.startsWith("v")) tagName.substring(1) else tagName
-
-                        if (normalizedTagName != currentVersionName) {
-                            (context as? MainActivity)?.runOnUiThread {
-                                showUpdateDialog(context, tagName, downloadUrl)
+                            val normalizedTagName = if (tagName.startsWith("v")) tagName.substring(1) else tagName
+                            
+                            if (normalizedTagName != currentVersionName) {
+                                (context as? MainActivity)?.runOnUiThread {
+                                    showUpdateDialog(context, tagName, downloadUrl)
+                                }
                             }
                         }
                     } catch (e: Exception) {
@@ -80,13 +80,14 @@ object UpdateHelper {
 
             override fun onResponse(call: Call, response: Response) {
                 val body = response.body ?: return
-                val file = File(context.externalCacheDir, "update.apk")
-                
                 try {
+                    val file = File(context.externalCacheDir, "update.apk")
                     val fos = FileOutputStream(file)
                     fos.write(body.bytes())
                     fos.close()
-                    installApk(context, file)
+                    (context as? MainActivity)?.runOnUiThread {
+                        installApk(context, file)
+                    }
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
