@@ -20,11 +20,19 @@ class AddAccountActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         repository = Repository(this)
+        
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "নতুন মিটার যোগ করুন"
 
         binding.etLowBalanceLimit.setText("500")
         binding.etReminderDays.setText("7")
 
         binding.btnSave.setOnClickListener { saveAccount() }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     private fun saveAccount() {

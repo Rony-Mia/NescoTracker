@@ -20,6 +20,7 @@ class RechargeHistoryActivity : AppCompatActivity() {
         binding = ActivityRechargeHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         accountId = intent.getLongExtra(EXTRA_ACCOUNT_ID, -1)
         val nickname = intent.getStringExtra(EXTRA_NICKNAME) ?: "মিটার"

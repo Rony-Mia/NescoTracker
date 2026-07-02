@@ -31,6 +31,9 @@ class AccountDetailActivity : AppCompatActivity() {
         repository = Repository(this)
         accountId = intent.getLongExtra(EXTRA_ACCOUNT_ID, -1)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "মিটার ডিটেইলস"
+
         if (accountId == -1L) {
             finish()
             return
@@ -52,6 +55,11 @@ class AccountDetailActivity : AppCompatActivity() {
         observeHistory()
         observeMonthlyUsage()
         loadAccountInfo()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     private fun loadAccountInfo() {
