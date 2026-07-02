@@ -12,8 +12,8 @@ android {
         applicationId = "com.example.nescotracker"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
-        versionName = "2.0"
+        versionCode = 7
+        versionName = "2.7"
     }
 
     buildTypes {
