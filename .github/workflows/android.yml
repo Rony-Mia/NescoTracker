@@ -3,7 +3,10 @@ name: Android CI/CD
 on:
   push:
     tags:
-      - 'v*' # যখনই আপনি v1.1, v1.2 এরকম ট্যাগ দিয়ে পুশ করবেন তখন কাজ করবে
+      - 'v*' 
+
+permissions:
+  contents: write # রিলিজ তৈরি করার জন্য এই পারমিশন জরুরি
 
 jobs:
   build:
@@ -25,9 +28,8 @@ jobs:
         run: ./gradlew assembleRelease
 
       - name: Create Release
-        id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          files: app/build/outputs/apk/release/app-release-unsigned.apk # অথবা signed apk থাকলে সেটির পথ
+          files: app/build/outputs/apk/release/*.apk # এই ফোল্ডারের সব APK ফাইল রিলিজ করবে
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
