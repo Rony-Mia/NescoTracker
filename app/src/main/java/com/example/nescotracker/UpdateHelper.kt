@@ -15,8 +15,8 @@ import java.io.IOException
 
 object UpdateHelper {
 
-    // TODO: এখানে আপনার GitHub ইউজারনেম এবং রিপোজিটরি নাম বসান
-    private const val GITHUB_USER = "YourUsername" 
+    // আপনার GitHub ইউজারনেম এবং রিপোজিটরি নাম
+    private const val GITHUB_USER = "Rony-Mia"
     private const val REPO_NAME = "NescoTracker"
     private const val API_URL = "https://api.github.com/repos/$GITHUB_USER/$REPO_NAME/releases/latest"
 
