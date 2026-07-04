@@ -21,8 +21,7 @@ class AddAccountActivity : AppCompatActivity() {
 
         repository = Repository(this)
         
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "নতুন মিটার যোগ করুন"
+        binding.btnBack.setOnClickListener { finish() }
 
         binding.etLowBalanceLimit.setText("500")
         binding.etReminderDays.setText("7")

@@ -31,8 +31,7 @@ class AccountDetailActivity : AppCompatActivity() {
         repository = Repository(this)
         accountId = intent.getLongExtra(EXTRA_ACCOUNT_ID, -1)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "মিটার ডিটেইলস"
+        binding.btnBack.setOnClickListener { finish() }
 
         if (accountId == -1L) {
             finish()

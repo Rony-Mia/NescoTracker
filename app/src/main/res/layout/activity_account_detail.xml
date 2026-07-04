@@ -13,6 +13,18 @@
         android:orientation="vertical"
         android:paddingBottom="24dp">
 
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="পিছনে"
+            android:padding="12dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorTextPrimary" />
+
         <!-- Hero balance card -->
         <LinearLayout
             android:layout_width="match_parent"
