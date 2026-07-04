@@ -28,6 +28,9 @@ class BalanceWorker(context: Context, params: WorkerParameters) : CoroutineWorke
                     NotificationHelper.showLowBalanceAlert(
                         applicationContext, account, balance, estimate.estimatedDaysLeft
                     )
+                } else {
+                    // রিচার্জ হয়ে গেলে আগের নোটিফিকেশন থাকলে তা সরিয়ে দাও
+                    NotificationHelper.cancelLowBalanceAlert(applicationContext, account.id)
                 }
 
                 // ২. Recharge reminder (নির্দিষ্ট দিন পরপর, ব্যালেন্স যাই থাকুক)

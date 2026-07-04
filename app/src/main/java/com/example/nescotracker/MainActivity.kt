@@ -159,11 +159,15 @@ class MainActivity : AppCompatActivity() {
                 val balance = repository.checkAndSaveBalance(account)
                 
                 // ম্যানুয়াল রিফ্রেশেও নোটিফিকেশন টেস্ট করার জন্য এই অংশটি যোগ করা হলো
-                if (balance != null && balance <= account.lowBalanceLimit) {
-                    val estimate = repository.calculateUsageEstimate(account.id, balance)
-                    NotificationHelper.showLowBalanceAlert(
-                        this@MainActivity, account, balance, estimate.estimatedDaysLeft
-                    )
+                if (balance != null) {
+                    if (balance <= account.lowBalanceLimit) {
+                        val estimate = repository.calculateUsageEstimate(account.id, balance)
+                        NotificationHelper.showLowBalanceAlert(
+                            this@MainActivity, account, balance, estimate.estimatedDaysLeft
+                        )
+                    } else {
+                        NotificationHelper.cancelLowBalanceAlert(this@MainActivity, account.id)
+                    }
                 }
             }
             binding.swipeRefresh.isRefreshing = false

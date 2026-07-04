@@ -61,12 +61,18 @@ object NotificationHelper {
             .setContentText(message)
             .setStyle(NotificationCompat.BigTextStyle().bigText(message))
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setAutoCancel(true)
+            .setOngoing(true) // নোটিফিকেশনটি সরানো যাবে না যতক্ষণ না রিচার্জ হয়
+            .setAutoCancel(false)
             .setContentIntent(openAppPendingIntent(context, account.id))
             .build()
 
         val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         manager.notify(1000 + account.id.toInt(), notification)
+    }
+
+    fun cancelLowBalanceAlert(context: Context, accountId: Long) {
+        val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        manager.cancel(1000 + accountId.toInt())
     }
 
     fun showRechargeReminder(context: Context, account: Account, balance: Float?) {
