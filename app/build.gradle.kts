@@ -12,13 +12,26 @@ android {
         applicationId = "com.example.nescotracker"
         minSdk = 24
         targetSdk = 34
-        versionCode = 9
-        versionName = "2.9"
+        versionCode = 11
+        versionName = "3.1"
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
     }
 
     buildTypes {
+        debug {
+            signingConfig = signingConfigs.getByName("release")
+        }
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
