@@ -186,13 +186,13 @@ class MainActivity : AppCompatActivity() {
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
 
-        val request = PeriodicWorkRequestBuilder<BalanceWorker>(3, TimeUnit.HOURS)
+        val request = PeriodicWorkRequestBuilder<BalanceWorker>(15, TimeUnit.MINUTES)
             .setConstraints(constraints)
             .build()
 
         WorkManager.getInstance(this).enqueueUniquePeriodicWork(
             BalanceWorker.WORK_NAME,
-            ExistingPeriodicWorkPolicy.KEEP,
+            ExistingPeriodicWorkPolicy.UPDATE,
             request
         )
     }

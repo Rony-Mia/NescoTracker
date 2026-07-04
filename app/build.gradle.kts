@@ -12,8 +12,8 @@ android {
         applicationId = "com.example.nescotracker"
         minSdk = 24
         targetSdk = 34
-        versionCode = 13
-        versionName = "3.3"
+        versionCode = 14
+        versionName = "3.4"
     }
 
     signingConfigs {
